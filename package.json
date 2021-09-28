@@ -2,15 +2,18 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "concurrently --kill-others \"npm run root:start\" \"npm run react:start\"",
-    "lint": "concurrently \"npm run root:lint\" \"npm run react:lint\"",
-    "test": "concurrently \"npm run root:test\" \"npm run react:test\"",
+    "start": "concurrently --kill-others \"npm run root:start\" \"npm run react:start\" \"npm run angular:start\"",
+    "lint": "concurrently \"npm run root:lint\" \"npm run react:lint\" \"npm run angular:lint\"",
+    "test": "concurrently \"npm run root:test\" \"npm run react:test\" \"npm run angular:test\"",
     "root:start": "npm run start --prefix packages/root-config",
     "react:start": "npm run start --prefix packages/react-spa",
+    "angular:start": "npm run start --prefix packages/angular-spa",
     "root:lint": "npm run lint --prefix packages/root-config",
     "react:lint": "npm run lint --prefix packages/react-spa",
+    "angular:lint": "npm run lint --prefix packages/angular-spa",
     "root:test": "npm run test --prefix packages/root-config",
-    "react:test": "npm run test --prefix packages/react-spa"
+    "react:test": "npm run test --prefix packages/react-spa",
+    "angular:test": "npm run test --prefix packages/angular-spa"
   },
   "devDependencies": {
     "concurrently": "^6.2.2",
