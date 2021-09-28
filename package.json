@@ -2,10 +2,15 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run root:start\"",
-    "lint": "concurrently \"npm run root:lint\"",
+    "start": "concurrently --kill-others \"npm run root:start\" \"npm run react:start\"",
+    "lint": "concurrently \"npm run root:lint\" \"npm run react:lint\"",
+    "test": "concurrently \"npm run root:test\" \"npm run react:test\"",
     "root:start": "npm run start --prefix packages/root-config",
-    "root:lint": "npm run lint --prefix packages/root-config"
+    "react:start": "npm run start --prefix packages/react-spa",
+    "root:lint": "npm run lint --prefix packages/root-config",
+    "react:lint": "npm run lint --prefix packages/react-spa",
+    "root:test": "npm run test --prefix packages/root-config",
+    "react:test": "npm run test --prefix packages/react-spa"
   },
   "devDependencies": {
     "concurrently": "^6.2.2",
