@@ -20,15 +20,22 @@
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "lint": "eslint src/**/*{.ts,.tsx}",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@stencil/core": "^2.7.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@stencil/eslint-plugin": "^0.3.1",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/html": "^6.3.8",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/parser": "^4.32.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.26.0",
     "jest": "^26.6.3",
