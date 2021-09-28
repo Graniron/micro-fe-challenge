@@ -1,0 +1,38 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  --space-1: 10px;
+  --space-2: 20px;
+  --primary-color: #265973;
+
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+sidebar {
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  width: 200px;
+}
+
+sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  border-radius: 10px;
+  border: 2px dotted var(--primary-color);
+  display: grid;
+  flex-grow: 1;
+  margin: var(--space-1);
+  padding: var(--space-1);
+  place-items: center;
+}
