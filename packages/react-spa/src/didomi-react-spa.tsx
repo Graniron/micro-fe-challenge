@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
 import Root from "./root.component";
+import { setUpUILibrary } from 'ui-library-react';
+
+setUpUILibrary();
 
 const lifecycles = singleSpaReact({
   React,

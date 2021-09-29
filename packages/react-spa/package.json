@@ -51,6 +51,7 @@
     "webpack-config-single-spa-react-ts": "^4.0.0"
   },
   "dependencies": {
+    "ui-library-react": "0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "single-spa-react": "^4.3.1",
