@@ -8,6 +8,18 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <script>
+    // Mark active link
+    window.addEventListener('single-spa:app-change', evt => {
+      const path = window.location.pathname;
+      const anchorMatchUrl = (a) => a.getAttribute('href') === path;
+
+      document.querySelectorAll('a').forEach((a) => {
+        anchorMatchUrl(a) ? a.classList.add('link-active') : a.classList.remove('link-active');
+      });
+    });
+  </script>
+
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
