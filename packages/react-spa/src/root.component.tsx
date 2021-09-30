@@ -1,11 +1,11 @@
-import { MyComponent } from 'ui-library-react';
+import { UiButton } from 'ui-library-react';
 
-export default function Root(props) {
+export default function Root() {
   return <section>
-    {props.name} is mounted!
+    <h1>React Sign In</h1>
 
     <div>
-      <MyComponent first="Roman" last="Yavoriv" />
+      <UiButton>Sign In</UiButton>
     </div>
   </section>;
 }

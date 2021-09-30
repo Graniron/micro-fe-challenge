@@ -6,25 +6,6 @@ import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 import { Components } from 'ui-library';
 
 
-export declare interface MyComponent extends Components.MyComponent {}
-@ProxyCmp({
-  inputs: ['first', 'last', 'middle']
-})
-@Component({
-  selector: 'my-component',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  inputs: ['first', 'last', 'middle']
-})
-export class MyComponent {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-
-
 export declare interface UiButton extends Components.UiButton {}
 @ProxyCmp({
   inputs: ['disabled', 'type']
