@@ -4,71 +4,48 @@ This challenge is used by Didomi for evaluating candidates for Micro front-end d
 
 This challenge is a chance for engineers at Didomi to see how you code and organize a project to implement a specification.
 
+## CodeBase overview
 
-## Codebase description
+Please take a look at [GETTING_STARTED.md](GETTING_STARTED.md) for codebase overview and getting started guide.
 
-Current workspace is using monorepo structure with lerna. It has 6 packages.
+## Challenge checklist
 
-3 packages for Micro front-end:
-- root-config: [single-spa](https://single-spa.js.org/) root application(port: 9000).
-- angular-spa: Angular application wrapped with single-spa that is used in the root-config(port: 9001).
-- react-spa: React application wrapped with single-spa that is used in the root-config(port: 9002).
+Design spec for the challenge - [TODO:Figma](FigmaLink);
 
-And 3 packages for ui-library components development that is used in the SPAs:
-- ui-library: [Stencil](https://stenciljs.com/) web-components library for UI elements. Out of the box library has `ui-button` component. It also includes [Storybook](https://storybook.js.org/) (port: 6006).
-- ui-library-angular: Angular wrapper for ui-library. It is injected into the angular-spa.
-- ui-library-react: React wrapper for ui-library. It is injected into the react-spa.
+The next items needs to be added to complete the challenge:
 
+- Update `ui-button` component in the UI Library to support size and variant props(see design spec).
+- Add `ui-input` component to the UI Library.
+This should be generic input control that supports common text input attributes as props and `change` event as output.
+Additionally it needs to have label and error props.
+- Add storybook's stories to the `ui-input` component.
+- Add tests for `ui-button` and `ui-input` components.
+- Use components in `angular-spa` and `react-spa` to create `Sign In` UI according to the design.
+- Add validation for `Sign In` form.
 
-### Getting started
+Current UI:
 
-Install dependencies:
+[<img src="challenge-info-assets/current-ui.png" width="500"/>]()
 
-```shell
-$ yarn lerna-bootstrap
-```
+Final Expected UI:
 
-Start Micro front-end applications(root-config, angular-spa, react-spa). Open `localhost:9000` in the browser.
-
-```shell
-$ yarn micro-fe:start
-```
+[<img src="challenge-info-assets/expected-ui.png" width="500"/>]()
 
 
-### UI Library
+## Expectations
 
-Start UI library:
+Your code will be reviewed by multiple engineers at Didomi and will serve as the base for a discussion in interviews.
+We want to see how you approach working on a complete project and strongly recommend that you work on this challenge alone. We will particularly focus on your attention to details and expect the code to be professionally structured, commented, documented, and tested.
 
-```shell
-$ yarn ui-library:build:watch
-```
+If anything is unclear, feel free to ask any question that might help you understand the specifications or requirements better.
 
-Start Storybook for UI library. Open `localhost:6006` in the browser.
+## Delivery
 
-```shell
-$ yarn storybook
-```
+Your application needs be sent to us as a GitHub repository or as a compressed archive containing all the deliverables.
 
+## Review session
 
-#### Adding new component
+After receiving your code challenge, we organize a review session with you and a few engineers from Didomi. During the review session, we will:
 
-Generate new Stencil component:
-
-```shell
-$ cd packages/ui-library && yarn generate
-```
-
-To be able to see new component in the micro front-end SPAs:
-
-- Add it to the [Angular proxies list](packages/ui-library-angular/src/directives/proxy-list.ts).
-- Rebuild UI library wrappers:
-
-```shell
-$ yarn ui-wrappers:build
-```
-
-- Stop and restart micro front-ends:
-
-```shell
-yarn micro-fe:start
-```
+- Ask you to share you screen and do a quick demo of the code you've added to the app
+- Ask you general technical questions related to your project, components, tests and frontend architecture

@@ -19,9 +19,6 @@
     "react:lint": "npm run lint --prefix packages/react-spa",
     "angular:lint": "npm run lint --prefix packages/angular-spa",
     "ui-library:lint": "npm run lint --prefix packages/ui-library",
-    "root:test": "npm run test --prefix packages/root-config",
-    "react:test": "npm run test --prefix packages/react-spa",
-    "angular:test": "npm run test --prefix packages/angular-spa",
     "ui-library:test": "npm run test --prefix packages/ui-library"
   },
   "devDependencies": {
