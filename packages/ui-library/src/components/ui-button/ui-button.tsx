@@ -25,9 +25,9 @@ export class UiButton {
 
   render() {
     return (
-      <Host>
+      <Host class="ui-button">
         <button
-          class="ui-button"
+          class="ui-button-el"
           type={this.type}
           disabled={this.disabled}
           onClick={this.handleClick}
