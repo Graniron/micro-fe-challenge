@@ -4,6 +4,12 @@
   "scripts": {
     "lerna-bootstrap": "lerna bootstrap",
     "start": "concurrently --kill-others \"npm run root:start\" \"npm run react:start\" \"npm run angular:start\"",
+    "micro-fe:start": "npm run start",
+    "ui-library:build:watch": "npm run build:watch --prefix packages/ui-library",
+    "storybook": "npm run storybook --prefix packages/ui-library",
+    "ui-wrappers:build": "npm run react-wrapper:build && npm run angular-wrapper:build",
+    "react-wrapper:build": "npm run build --prefix packages/ui-library-react",
+    "angular-wrapper:build": "npm run build --prefix packages/ui-library-angular",
     "lint": "concurrently \"npm run root:lint\" \"npm run react:lint\" \"npm run angular:lint\" \"npm run ui-library:lint\"",
     "test": "concurrently \"npm run root:test\" \"npm run react:test\" \"npm run angular:test\" \"npm run ui-library:test\"",
     "root:start": "npm run start --prefix packages/root-config",
