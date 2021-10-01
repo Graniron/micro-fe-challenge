@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "concurrently": "^6.2.2",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "tsickle": "0.39.1"
   },
   "engines": {
     "npm": "Use yarn instead of NPM",
