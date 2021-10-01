@@ -1,6 +1,6 @@
-import { UiButton } from 'ui-library-react';
+import { UiButton } from "ui-library-react";
 
-import './root.component.css';
+import "./root.component.css";
 
 export default function Root() {
   return <section>
