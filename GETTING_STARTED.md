@@ -68,5 +68,19 @@ $ yarn ui-wrappers:build
 - Stop and restart micro front-ends:
 
 ```shell
-yarn micro-fe:start
+$ yarn micro-fe:start
+```
+
+#### Testing
+
+Run e2e tests(Jets+Puppeteer) for UI Library:
+
+```shell
+$ cd packages/ui-library && yarn test
+```
+
+Alternatively you can run tests:watch to keep tests in sync with changes
+
+```shell
+$ cd packages/ui-library && yarn test:watch
 ```

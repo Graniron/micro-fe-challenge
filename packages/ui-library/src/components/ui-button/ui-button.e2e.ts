@@ -1,3 +1,3 @@
 describe('ui-button', () => {
-  // TODO: add tests
+  it(`TODO: add tests`, () => {});
 });

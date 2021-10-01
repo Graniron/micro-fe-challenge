@@ -18,8 +18,7 @@
     "root:lint": "npm run lint --prefix packages/root-config",
     "react:lint": "npm run lint --prefix packages/react-spa",
     "angular:lint": "npm run lint --prefix packages/angular-spa",
-    "ui-library:lint": "npm run lint --prefix packages/ui-library",
-    "ui-library:test": "npm run test --prefix packages/ui-library"
+    "ui-library:lint": "npm run lint --prefix packages/ui-library"
   },
   "devDependencies": {
     "concurrently": "^6.2.2",
