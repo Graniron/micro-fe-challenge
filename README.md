@@ -1,6 +1,6 @@
 # Micro front-end engineering challenge
 
-This challenge is used by Didomi for evaluating candidates for Micro front-end development positions.
+This challenge is used by Didomi for evaluating candidates for Micro front-end maintainer positions.
 
 This challenge is a chance for engineers at Didomi to see how you code and organize a project to implement a specification.
 
@@ -10,7 +10,7 @@ Please take a look at [GETTING_STARTED.md](GETTING_STARTED.md) for codebase over
 
 ## Challenge checklist
 
-Design spec for the challenge - [TODO:Figma](FigmaLink);
+Design specification for the challenge - [Figma](https://www.figma.com/file/fYeI82SDeNBcDCOSgWDdfp/Micro-Front-End-Challenge?node-id=0%3A1);
 
 The next items needs to be added to complete the challenge:
 
@@ -21,7 +21,7 @@ Additionally it needs to have label and error props.
 - Add storybook's stories to the `ui-input` component.
 - Add tests for `ui-button` and `ui-input` components.
 - Use components in `angular-spa` and `react-spa` to create `Sign In` UI according to the design.
-- Add validation for `Sign In` form.
+- Add validation for `Sign In` form in `angular-spa` and `react-spa`.
 
 Current UI:
 
