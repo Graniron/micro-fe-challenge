@@ -14,14 +14,18 @@ Design specification for the challenge - [Figma](https://www.figma.com/file/fYeI
 
 The next items needs to be added to complete the challenge:
 
-- Update `ui-button` component in the UI Library to support size and variant props(see design spec).
-- Add `ui-input` component to the UI Library.
-This should be generic input control that supports common text input attributes as props and `change` event as output.
-Additionally it needs to have label and error props.
+- Update `ui-button` component in the UI Library to support size and variant props (see design spec).
+- Add `ui-input` component to the UI Library (see design spec). This should be generic input control that supports common text input attributes as props and change event as output. Additionally it needs to have label and error props.
 - Add storybook's stories to the `ui-input` component.
 - Add tests for `ui-button` and `ui-input` components.
-- Use components in `angular-spa` and `react-spa` to create `Sign In` UI according to the design.
-- Add validation for `Sign In` form in `angular-spa` and `react-spa`.
+- Use both components in `angular-spa` and `react-spa` to create `Sign In` UI according to the design.
+You can display the submitted values in an alert dialog
+- Add validation for `Sign In` form in `angular-spa` and `react-spa`:
+  - Both fields are required.
+  - Email must be a valid email format.
+  - The error messages should only be displayed once the form is submitted or input is touched.
+  Bonus point if you use a library for the form validation (eg Angular Forms module for Angular and Formik for React).
+- Bonus point if you add unit tests for both angular-spa and react-spa `Sign In` pages.
 
 Current UI:
 

@@ -17,36 +17,51 @@ And 3 packages for ui-library components development that is used in the SPAs:
 
 ### Getting started
 
-1. Install dependencies:
+Install dependencies:
+
+First roots dependencies:
+
+```shell
+$ yarn
+```
+
+Then dependencies for packages:
 
 ```shell
 $ yarn lerna-bootstrap
 ```
 
-2. Build UI Library
+#### UI Library
+
+Before running Micro front-ends we need to build UI library and it's wrappers(so they can be used in the SPAs)
+
+1. Build UI Library
 
 ```shell
 $ yarn ui-library:build:watch
 ```
 
-3. Build UI library wrappers:
+2. Build UI library wrappers:
 
 ```shell
 $ yarn ui-wrappers:build
 ```
 
-4. Start Micro front-end applications(root-config, angular-spa, react-spa). Open `localhost:9000` in the browser.
-
-```shell
-$ yarn micro-fe:start
-```
-
-5. Start Storybook for UI library. Open `localhost:6006` in the browser.
+3. Start Storybook for UI library. Open `localhost:6006` in the browser.
 
 ```shell
 $ yarn storybook
 ```
 
+#### Micro front-end
+
+Make sure you've started UI Library before building Micro front-end
+
+1. Start Micro front-end applications(root-config, angular-spa, react-spa). Open `localhost:9000` in the browser.
+
+```shell
+$ yarn micro-fe:start
+```
 
 #### Adding new component
 
