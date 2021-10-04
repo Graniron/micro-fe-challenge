@@ -33,7 +33,7 @@ $ yarn lerna-bootstrap
 
 #### UI Library
 
-Before running Micro front-ends we need to build UI library and it's wrappers(so they can be used in the SPAs)
+With building the `UI library` on watch mode you can develop and see the changes on storybook.
 
 1. Build UI Library
 
@@ -55,7 +55,7 @@ $ yarn storybook
 
 #### Micro front-end
 
-Make sure you've started UI Library before building Micro front-end
+Before starting Micro front-end make sure you've built `UI Library` and it's wrappers.
 
 1. Start Micro front-end applications(root-config, angular-spa, react-spa). Open `localhost:9000` in the browser.
 
