@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build angular-spa --prod",
-    "start": "ng s --project angular-spa --disable-host-check --port 9001 --live-reload false",
-    "start:standalone": "ng serve",
+    "start": "ng s --configuration=development --disable-host-check --port 9001 --live-reload false",
+    "start:standalone": "ng serve --configuration=development-standalone",
     "build:standalone": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless",
