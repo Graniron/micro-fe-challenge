@@ -68,6 +68,7 @@
               "sourceMap": true,
               "namedChunks": true,
               "outputHashing": "none",
+              "aot": false,
               "main": "src/main.ts",
               "tsConfig": "tsconfig.app.json",
               "deployUrl": "http://localhost:9001/",
