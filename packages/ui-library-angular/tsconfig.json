@@ -6,7 +6,7 @@
     "flatModuleId": "ui-library-angular",
     "skipTemplateCodegen": true,
     "fullTemplateTypeCheck": false,
-    "enableIvy": false
+    "enableIvy": true
   },
   "lib": [
     "es2018",
